@@ -186,6 +186,7 @@ In this section, you will learn how to create services for deployed PODs.
 1. Open deployment.yml file
 2. Add following code to the bottom of the file
     ```yaml
+    ---
     apiVersion: v1
     kind: Service
     metadata:
