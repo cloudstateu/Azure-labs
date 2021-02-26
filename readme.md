@@ -153,18 +153,18 @@ In this section, you will learn how to create deployment file and how to deploy 
      selector:
        matchLabels:
          app: containerapp
-    template:
-     metadata:
-       labels:
-         app: containerapp
-     spec:
-       containers:
-       - name: containerapp
-         image: <your registry name>.azurecr.io/containerapp
-         ports:
-         - containerPort: 3000
-       imagePullSecrets:
-       - name: mysecret
+     template:
+       metadata:
+         labels:
+           app: containerapp
+       spec:
+         containers:
+         - name: containerapp
+           image: <your registry name>.azurecr.io/containerapp
+           ports:
+           - containerPort: 3000
+         imagePullSecrets:
+         - name: mysecret
     ```
 
 1. Open console in **ConatinerApp** folder and run this command:    
