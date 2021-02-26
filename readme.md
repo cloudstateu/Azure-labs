@@ -17,7 +17,7 @@ In this section you will learn how to create Docker Image based on NodeJS simple
 
 1. Create folder **ContainerApp**.
 1. Create file **package.json** and insert there json:
-   ``` json
+   ```json
    {
     "name": "containerapp",
     "version": "1.0.0",
@@ -189,13 +189,13 @@ In this section, you will learn how to create services for deployed PODs.
     apiVersion: v1
     kind: Service
     metadata:
-     name: containerappservice
+      name: containerappservice
     spec:
-     type: LoadBalancer
-     ports:
-     - port: 3000
-     selector:
-      app: containerapp
+      type: LoadBalancer
+      ports:
+      - port: 3000
+      selector:
+        app: containerapp
     ```
 
 1. Open console and type
