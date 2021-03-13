@@ -50,27 +50,34 @@ In this lab you will learn how to monitor your application with Azure Applicatio
     -	SKU and size: **Standard (S1)**
 
 1. Press **Next: Networking** and provide following details:
-    - Enable Application Insights: **Yes**
-    - Application Insights: **Create new: monitoring-chm-studentX** [replace X with your student number]
+    - Enable Application Insights: **No**
 
-1. Press **Review and create**, then **Create** and wait for the resources to be deployed, then **Go to the resource**.
+2. Press **Review and create**, then **Create** and wait for the resources to be deployed, then **Go to the resource**.
 
 
 ### Task 2: Deploy the application to App Service 
 
 1. Access the web app that you created earlier in this lab.
 
-1. In the **Deployment** section on the left, find the **Deployment Center (Classic)** section, and then select **External** tile and press **Continue** at the bottom.
+1. In the **Deployment** section on the left, click **Application Insights**, and then select **Turn on Application Insights**.
 
-1. Select **App Service build service** and press **Continue**.
+1. Provide following parameters and press **Apply** at the bottom.
+   - Collect application monitoring data using Application Insights: **Enable**
+   - New resource name: **monitoring-chm-studentX** [replace X with your student number]
+    - Location: **West Europe**
+    - Leave the rest of the parameters at its default
 
-1. In the "Configure" step provide following details
+2. In the **Deployment** section on the left side menu, click **Deployment Center (Classic)**, and then select **External** tile and press **Continue** at the bottom.
+
+3. Select **App Service build service** and press **Continue**.
+
+4. In the "Configure" step provide following details
    - Repository: https://github.com/cloudstateu/AdventureWorksLT-Sample-CsApp
    - Branch: **main**
    - Repository Type: **Git**
    - Private Repository: **No**
 
-1. Press **Continue** and wait for succesful deployment.
+5. Press **Continue** and wait for succesful deployment.
    > **Note:** In the deployment blade, wait for the "Success" in the "Status" column.
    
 
