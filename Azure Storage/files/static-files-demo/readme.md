@@ -41,6 +41,7 @@
 #### Review
 You created an Azure Storage container to host your static website.
 
+
 ### Exercise 2: Upload website files to your storage
 
 #### Task 1: Download sample landing page
@@ -78,3 +79,24 @@ You created an Azure Storage container to host your static website.
 
 #### Review
 You used Azure Storage Explorer application to upload your website to the Azure Storage Static website.
+
+
+#### Task 3: Host Static website on CDN
+
+1. Go to the newly created Azure Storage Account and locate "Azure CDN" under "Security + networking" on the left side menu.
+
+1. On the "Azure CDN" blade create new endpoint with the following values:
+    - CDN profile: **Create new**
+    - (endpoint name): **staticwebsiteendpoint**
+    - Pricing tier: **Standard Akamai**
+    - CDN enpoint name: **chm-[yourname]**
+    - Origin hostmane: **contenthost[yourname]** ... (Static website)
+
+1. Wait for the endpoint to be created and open it's blade.
+
+1. Locate "Endpoint hostname" and open the link. The CDN should be populated with your website in a couple of minutes.
+
+> **Note:** Feel free to configure your domain's CNAME to point at your endpoint. 
+
+#### Review
+You created a CDN endpoint and populated your website on in.
